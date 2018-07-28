@@ -1,0 +1,32 @@
+<svelte:window 
+	on:scroll="this.store.set({scrollY: this.scrollY})" 
+	on:resize="this.store.set({innerHeight: this.innerHeight})"
+/>
+
+<Header/>
+<Jumbo/>
+<Table/>
+<Footer/>
+
+<style>
+	:global(html) {
+		font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+		background-color: #f1f1f1;
+	}
+
+	:global(body) {
+		margin: 0;
+		overflow-y: scroll;
+	}
+</style>
+
+<script>
+	export default {
+		components: {
+			Header: './header/Header.html',
+			Jumbo: './jumbo/Jumbo.html',
+			Table: './table/Table.html',
+			Footer: './footer/Footer.html'
+		}
+	}
+</script>

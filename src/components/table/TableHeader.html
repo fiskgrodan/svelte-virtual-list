@@ -1,0 +1,28 @@
+<div class="tableheader">
+	<div class="column ssn">SSN</div>
+	<div class="column name">Name</div>
+	<div class="column gender">Gender</div>
+	<div class="column age">Age</div>
+</div>
+
+<style>
+	.tableheader {
+		display: flex;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.tableheader .column {
+		flex-basis: 20%;
+		font-weight: 600;
+	}
+
+	.tableheader .column.name {
+		flex-basis: 40%;
+	}
+
+	.tableheader .column.age {
+		text-align: right;
+	}
+</style>

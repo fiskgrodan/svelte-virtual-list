@@ -1,0 +1,64 @@
+<header class="header">
+	<div class="flexrow">
+		<div class="item logo">
+			<strong>VLIST</strong>
+		</div>
+		<div class="item pink hide-xs">scrollY: {$scrollY.toFixed(0)}px</div>
+		<div class="item pink hide-sm">innerHeight: {$innerHeight}px</div>
+		<div class="item pink hide-sm">listHeight: {$listHeight}px</div>
+		<div class="item blue hide-xs">users: {$userCount}</div>
+		<div class="item blue hide-xs">rendered: {$firstUser}-{$lastUser}</div>
+		<div class="item blue hide-sm">topFiller: {$topFillerHeight}px</div>
+		<div class="item blue hide-sm">bottomFiller: {$bottomFillerHeight}px</div>
+	</div>
+</header>
+
+<style>
+	header.header {
+		z-index: 1;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		color: #ffffff;
+		background-color: #161616;
+		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+	}
+
+	.flexrow {
+		display: flex;
+		align-items: center;
+		height: 50px;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.item {
+		text-align: right;
+		padding-right: 1rem;
+	}
+
+	.item.logo {
+		flex-grow: 1;
+		text-align: left;
+	}
+
+	.pink {
+		color: LightPink;
+	}
+
+	.blue {
+		color: LightSkyBlue
+	}
+
+	@media (max-width: 1280px) {
+		.hide-sm {
+			display: none;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hide-xs {
+			display: none;
+		}
+	}
+</style>

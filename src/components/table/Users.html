@@ -1,0 +1,45 @@
+<div style="padding-top: {$topFillerHeight}px; padding-bottom: {$bottomFillerHeight}px;">
+	{#each $filteredUsers as user}
+	<div class="usercontainer">
+		<div class="usercard">
+			<div class="usercolumn ssn">{user.ssn}</div>
+			<div class="usercolumn name">{user.name}</div>
+			<div class="usercolumn gender">{user.gender}</div>
+			<div class="usercolumn age">{user.age}</div>
+		</div>
+	</div>
+	{/each}
+</div>
+
+<style>
+	.usercontainer {
+		padding-bottom: 1rem;
+	}
+
+	.usercard {
+		display: flex;
+		align-items: center;
+		height: 50px;
+		background-color: #ffffff;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+		transition: box-shadow 200ms;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.usercard:hover {
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	.usercolumn {
+		flex-basis: 20%;
+	}
+
+	.usercolumn.name {
+		flex-basis: 40%;
+	}
+
+	.usercolumn.age {
+		text-align: right;
+	}
+</style>
